@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { formatAgoe } from '../util/date';
+import { formatAgo } from '../util/date';
 
 export default function VideoCard({ video, type }) {
     const { title, thumbnails, channelTitle, publishedAt } = video.snippet;
@@ -21,7 +21,7 @@ export default function VideoCard({ video, type }) {
             <div>
                 <p className='font-semibold my-2 line-clamp-2'>{title}</p>
                 <p className='text-sm opacity-80'>{channelTitle}</p>
-                <p className='text-sm'>{formatAgoe(publishedAt, 'ko')}</p>
+                <p className='text-sm'>{formatAgo(publishedAt, 'ko')}</p>
             </div>
         </li>
     );
